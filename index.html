@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Bear Cottage — Catskills Cabin Rental with Hot Tub | Livingston Manor, NY</title>
+<meta name="description" content="A renovated 1902 cottage on three wooded acres in Livingston Manor, NY. Hot tub under the stars, chef's kitchen, fire pit, and a tiny house out back. Sleeps 8. Two hours from NYC.">
+<meta property="og:title" content="Black Bear Cottage — Catskills Cabin with Hot Tub">
+<meta property="og:description" content="Three wooded acres. A hot tub under the stars. A renovated 1902 cottage two hours from New York City.">
+<meta property="og:image" content="images/image-12.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VacationRental",
+  "name": "Black Bear Cottage",
+  "description": "A renovated 1902 cottage on three wooded acres in Livingston Manor, NY. Sleeps 8 across 4 bedrooms with hot tub, fire pit, chef's kitchen, and seasonal tiny house.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Livingston Manor",
+    "addressRegion": "NY",
+    "addressCountry": "US"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "14"
+  },
+  "containsPlace": {
+    "@type": "Accommodation",
+    "occupancy": { "@type": "QuantitativeValue", "value": 8 },
+    "numberOfBedrooms": 4,
+    "numberOfBathroomsTotal": 2
+  },
+  "petsAllowed": true,
+  "checkinTime": "15:00",
+  "checkoutTime": "11:00",
+  "url": "https://www.blackbearcottage.net/"
+}
+</script>
+<style>
+  :root {
+    --ink: #14120f;
+    --ink-2: #1d1a16;
+    --ink-3: #262219;
+    --paper: #f4efe6;
+    --paper-dim: #cfc7b8;
+    --amber: #d9a45b;
+    --amber-soft: #e8c491;
+    --line: rgba(244, 239, 230, 0.14);
+    --serif: "Fraunces", Georgia, serif;
+    --sans: "Inter", -apple-system, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 28px;
+    transition: background .4s ease, box-shadow .4s ease, padding .4s ease;
+  }
+  nav.scrolled {
+    background: rgba(20, 18, 15, 0.92);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 var(--line);
+    padding: 12px 28px;
+  }
+  .brand {
+    font-family: var(--serif); font-weight: 500; font-size: 1.05rem;
+    letter-spacing: .12em; text-transform: uppercase; text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .brand svg { width: 26px; height: 26px; fill: var(--amber); }
+  .nav-links { display: flex; gap: 28px; align-items: center; list-style: none; }
+  .nav-links a {
+    text-decoration: none; font-size: .78rem; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--paper-dim); font-weight: 400;
+    transition: color .25s;
+  }
+  .nav-links a:hover { color: var(--paper); }
+  .btn {
+    display: inline-block; text-decoration: none;
+    background: var(--amber); color: var(--ink);
+    font-family: var(--sans); font-weight: 500; font-size: .8rem;
+    letter-spacing: .12em; text-transform: uppercase;
+    padding: 13px 26px; border-radius: 2px;
+    transition: background .25s, transform .25s;
+  }
+  .btn:hover { background: var(--amber-soft); transform: translateY(-1px); }
+  .btn.ghost {
+    background: transparent; color: var(--paper);
+    border: 1px solid rgba(244,239,230,.4);
+  }
+  .btn.ghost:hover { border-color: var(--paper); background: rgba(244,239,230,.06); }
+  @media (max-width: 860px) { .nav-links li.hide-m { display: none; } }
+
+  header.hero {
+    position: relative; min-height: 100svh;
+    display: flex; align-items: flex-end;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(180deg, rgba(20,18,15,.45) 0%, rgba(20,18,15,.1) 35%, rgba(20,18,15,.55) 72%, rgba(20,18,15,.97) 100%),
+      url('images/image-12.jpg');
+    background-size: cover; background-position: center;
+  }
+  .hero-inner { position: relative; width: 100%; padding: 0 0 72px; }
+  .rating-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: .78rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--amber-soft); border: 1px solid rgba(217,164,91,.45);
+    border-radius: 100px; padding: 7px 16px; margin-bottom: 26px;
+    background: rgba(20,18,15,.35); backdrop-filter: blur(4px);
+  }
+  h1 {
+    font-family: var(--serif); font-weight: 300;
+    font-size: clamp(2.4rem, 5.4vw, 4.6rem);
+    line-height: 1.08; letter-spacing: -0.01em; max-width: 850px;
+  }
+  h1 em { font-style: italic; color: var(--amber-soft); }
+  .hero-sub {
+    margin-top: 22px; max-width: 560px; font-size: 1.05rem;
+    color: var(--paper-dim); font-weight: 300;
+  }
+  .hero-ctas { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .facts { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--ink-2); }
+  .facts-inner {
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+    padding: 26px 24px; gap: 18px 32px; max-width: 1200px; margin: 0 auto;
+  }
+  .fact { text-align: center; flex: 1 1 auto; min-width: 100px; }
+  .fact b {
+    display: block; font-family: var(--serif); font-weight: 400;
+    font-size: 1.5rem; color: var(--paper); letter-spacing: .01em;
+  }
+  .fact span {
+    font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--paper-dim);
+  }
+
+  section { padding: 110px 0; }
+  .kicker {
+    font-size: .74rem; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--amber); font-weight: 500; margin-bottom: 18px; display: block;
+  }
+  h2 {
+    font-family: var(--serif); font-weight: 300;
+    font-size: clamp(1.9rem, 3.6vw, 3rem); line-height: 1.15;
+    letter-spacing: -0.01em; max-width: 640px;
+  }
+  h2 em { font-style: italic; color: var(--amber-soft); }
+  .lede { margin-top: 22px; max-width: 620px; color: var(--paper-dim); font-size: 1.02rem; }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+  .split.rev > .split-img { order: 2; }
+  .split-img { position: relative; }
+  .split-img img {
+    width: 100%; aspect-ratio: 4/4.6; object-fit: cover; border-radius: 3px;
+  }
+  .split-img::after {
+    content: ""; position: absolute; inset: 14px;
+    border: 1px solid rgba(244,239,230,.22); border-radius: 2px; pointer-events: none;
+  }
+  .split h3 {
+    font-family: var(--serif); font-weight: 300; font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+    line-height: 1.2; margin-bottom: 18px;
+  }
+  .split p { color: var(--paper-dim); margin-bottom: 16px; }
+  .split p:last-child { margin-bottom: 0; }
+  .split .note { font-size: .85rem; font-style: italic; color: rgba(207,199,184,.65); }
+  @media (max-width: 860px) {
+    .split { grid-template-columns: 1fr; gap: 36px; }
+    .split.rev > .split-img { order: 0; }
+    section { padding: 72px 0; }
+  }
+
+  .rooms-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .rooms-grid figure { margin: 0; }
+  .rooms-grid img {
+    width: 100%; aspect-ratio: 3/3.6; object-fit: cover; border-radius: 3px;
+    filter: saturate(.94);
+  }
+  .rooms-grid figcaption { padding: 16px 2px 0; }
+  .rooms-grid figcaption b {
+    display: block; font-family: var(--serif); font-weight: 400;
+    font-size: 1.05rem; margin-bottom: 4px;
+  }
+  .rooms-grid figcaption span { font-size: .84rem; color: var(--paper-dim); line-height: 1.5; display: block; }
+  @media (max-width: 860px) { .rooms-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .gallery { background: var(--ink-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .g-grid {
+    margin-top: 48px; display: grid; gap: 14px;
+    grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px;
+  }
+  .g-grid a { overflow: hidden; border-radius: 3px; display: block; }
+  .g-grid img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform .8s cubic-bezier(.2,.6,.2,1), filter .8s;
+    filter: saturate(.92);
+  }
+  .g-grid a:hover img { transform: scale(1.045); filter: saturate(1.05); }
+  .g-wide { grid-column: span 2; }
+  .g-tall { grid-row: span 2; }
+  @media (max-width: 860px) {
+    .g-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
+  }
+
+  .amen-grid {
+    margin-top: 54px; display: grid;
+    grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: 3px; overflow: hidden;
+  }
+  .amen {
+    background: var(--ink); padding: 30px 28px;
+    transition: background .3s;
+  }
+  .amen:hover { background: var(--ink-3); }
+  .amen .ico { color: var(--amber); display: block; margin-bottom: 14px; }
+  .amen .ico-svg { width: 28px; height: 28px; }
+  .amen b { display: block; font-weight: 500; font-size: .95rem; margin-bottom: 4px; letter-spacing: .02em; }
+  .amen span { font-size: .85rem; color: var(--paper-dim); }
+  .amen-more {
+    margin-top: 26px; color: var(--paper-dim); font-size: .88rem; letter-spacing: .02em;
+  }
+  @media (max-width: 860px) { .amen-grid { grid-template-columns: 1fr; } }
+
+  .reviews { background: var(--ink-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .rev-head { text-align: center; }
+  .rev-head h2 { margin: 0 auto; }
+  .big-rating {
+    font-family: var(--serif); font-size: clamp(3.4rem, 7vw, 5.4rem);
+    font-weight: 300; color: var(--amber-soft); line-height: 1;
+  }
+  .stars { color: var(--amber); letter-spacing: .3em; font-size: 1.05rem; margin: 10px 0 6px; }
+  .rev-sub { color: var(--paper-dim); font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; }
+  .rev-grid { margin-top: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .rev-card {
+    border: 1px solid var(--line); border-radius: 3px; padding: 34px;
+    background: var(--ink); display: flex; flex-direction: column; gap: 18px;
+  }
+  .rev-card q {
+    quotes: "\201C" "\201D";
+    font-family: var(--serif); font-weight: 300; font-style: italic;
+    font-size: 1.08rem; line-height: 1.55; color: var(--paper);
+  }
+  .rev-card footer { font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--paper-dim); }
+  .rev-card footer b { color: var(--amber-soft); font-weight: 500; }
+  @media (max-width: 860px) { .rev-grid { grid-template-columns: 1fr; } }
+
+  .area-grid { margin-top: 54px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .area-card {
+    border-radius: 3px; overflow: hidden; border: 1px solid var(--line);
+    background: var(--ink-2); display: flex; flex-direction: column;
+  }
+  .area-card img { height: 230px; width: 100%; object-fit: cover; filter: saturate(.92); }
+  .area-body { padding: 26px; flex: 1; }
+  .area-body b { font-family: var(--serif); font-weight: 400; font-size: 1.2rem; display: block; margin-bottom: 8px; }
+  .area-body p { font-size: .92rem; color: var(--paper-dim); }
+  .area-body .tag { font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--amber); display: block; margin-bottom: 10px; }
+  @media (max-width: 860px) { .area-grid { grid-template-columns: 1fr; } }
+
+  details {
+    border-bottom: 1px solid var(--line); padding: 22px 4px;
+  }
+  details summary {
+    cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--serif); font-size: 1.15rem; font-weight: 400;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: "+"; color: var(--amber); font-size: 1.3rem; transition: transform .3s; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { margin-top: 14px; color: var(--paper-dim); max-width: 700px; }
+  .faq-wrap { max-width: 820px; margin: 48px auto 0; }
+
+  .book {
+    position: relative; text-align: center; padding: 150px 24px;
+    background-image:
+      linear-gradient(180deg, rgba(20,18,15,.88), rgba(20,18,15,.72)),
+      url('images/img-4013.jpg');
+    background-size: cover; background-position: center; background-attachment: fixed;
+  }
+  .book h2 { margin: 0 auto; max-width: 720px; }
+  .book .lede { margin-left: auto; margin-right: auto; text-align: center; }
+  .book .btn { margin-top: 36px; font-size: .88rem; padding: 17px 42px; }
+  .book .fine { margin-top: 20px; font-size: .8rem; color: rgba(207,199,184,.7); }
+
+  .site-footer {
+    border-top: 1px solid var(--line); padding: 54px 0; background: var(--ink);
+  }
+  .foot-inner {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;
+  }
+  .foot-inner .brand { font-size: .9rem; }
+  .foot-links { display: flex; gap: 24px; list-style: none; }
+  .foot-links a { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--paper-dim); text-decoration: none; }
+  .foot-links a:hover { color: var(--paper); }
+  .foot-note { width: 100%; margin-top: 28px; font-size: .75rem; color: rgba(207,199,184,.5); }
+
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 22a7 7 0 1 1 6-10 18 18 0 0 1 16 0 7 7 0 1 1 6 10 18 18 0 0 1 4 11c0 12-10 19-18 19S14 45 14 33a18 18 0 0 1 4-11zm14 12a4 4 0 0 0-4 4c0 3 2 6 4 6s4-3 4-6a4 4 0 0 0-4-4z"/></svg>
+    Black Bear Cottage
+  </a>
+  <ul class="nav-links">
+    <li class="hide-m"><a href="#cottage">The Cottage</a></li>
+    <li class="hide-m"><a href="#gallery">Photos</a></li>
+    <li class="hide-m"><a href="#amenities">Amenities</a></li>
+    <li class="hide-m"><a href="#reviews">Reviews</a></li>
+    <li class="hide-m"><a href="#area">The Area</a></li>
+    <li class="hide-m"><a href="#faq">FAQs</a></li>
+    <li><a class="btn" href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener">Book on Airbnb</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-inner">
+    <span class="rating-pill">★ 5.0 · Guest Favorite on Airbnb · Superhost</span>
+    <h1>Three wooded acres. A hot tub under the stars. <em>Two hours from the city.</em></h1>
+    <p class="hero-sub">A thoughtfully renovated 1902 cottage — with a tiny house out back — at the edge of Catskill Park in Livingston Manor, New York. Sleeps 8. From $470 a night.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener">Check Availability</a>
+      <a class="btn ghost" href="#cottage">Explore the Cottage</a>
+    </div>
+  </div>
+</header>
+
+<div class="facts">
+  <div class="facts-inner">
+    <div class="fact"><b>4</b><span>Bedrooms</span></div>
+    <div class="fact"><b>8</b><span>Guests</span></div>
+    <div class="fact"><b>2</b><span>Full Baths</span></div>
+    <div class="fact"><b>3</b><span>Wooded Acres</span></div>
+    <div class="fact"><b>2 mi</b><span>To the Village</span></div>
+    <div class="fact"><b>2 hrs</b><span>From NYC</span></div>
+  </div>
+</div>
+<section id="cottage">
+  <div class="wrap">
+    <span class="kicker reveal">The Cottage</span>
+    <h2 class="reveal">Old bones, <em>modern comfort</em> — designed for slow weekends and long stays</h2>
+    <p class="lede reveal">Originally built in 1902 and gut-renovated in 2020, Black Bear Cottage blends its history with everything you actually want: a chef's kitchen, a wood-burning stove with a custom mosaic hearth, and the kind of quiet you came here for.</p>
+
+    <div class="split reveal" style="margin-top:80px">
+      <div class="split-img">
+        <img src="images/image-9.jpg" alt="The renovated chef's kitchen at Black Bear Cottage" loading="lazy">
+      </div>
+      <div>
+        <h3>A kitchen you'll actually cook in</h3>
+        <p>Stainless appliances, an eat-in breakfast bar, and enough counter space to make the dinner you've been dreaming about. Four bedrooms plus a bonus room sleep eight in the main house, with two updated bathrooms with walk-in showers.</p>
+        <p>When the meal's done, retreat to the library nook — stocked with books, games, and a guitar — or pull a chair up to the wood-burning stove.</p>
+      </div>
+    </div>
+
+    <div class="split rev reveal" style="margin-top:90px">
+      <div class="split-img">
+        <img src="images/dsc-6904.jpg" alt="The tiny house at Black Bear Cottage" loading="lazy">
+      </div>
+      <div>
+        <h3>Plus a tiny house out back</h3>
+        <p>Just off the deck, a separate tiny house sleeps two in a cozy loft. Perfect for friends who want their own space, the grown-up kids, or anyone who's always wanted to wake up in their own little cabin in the woods.</p>
+        <p class="note">Seasonal: the tiny house runs on space heaters in colder months and isn't plumbed — guests use the main house facilities.</p>
+      </div>
+    </div>
+
+    <div class="split reveal" style="margin-top:90px">
+      <div class="split-img">
+        <img src="images/image-17.jpg" alt="Year-round outdoor hot tub at Black Bear Cottage overlooking the forest" loading="lazy">
+      </div>
+      <div>
+        <h3>The hot tub, open all year</h3>
+        <p>At the edge of the deck, overlooking the forest — and open in every season. Soak under the stars on a summer night with the fireflies out, or sink into the steam in the middle of winter while snow settles on the hemlocks.</p>
+        <p>It's the thing guests mention most. One review put it simply: the hot tub while watching the snow melt outside.</p>
+      </div>
+    </div>
+
+    <div class="split rev reveal" style="margin-top:90px">
+      <div class="split-img">
+        <img src="images/f53cd497-5934-4a70-a914-8908f5592429.jpg" alt="The fire pit at Black Bear Cottage, ideal for stargazing" loading="lazy">
+      </div>
+      <div>
+        <h3>The land is the whole point</h3>
+        <p>Three private acres of meadow and forest, bordered by the Rail Trail — walk straight from the back door into a hike or a bike ride. The wraparound deck catches the sun all day: dining table and grill in the middle, fire pit at the edge of the trees, and a sledding hill when the snow comes.</p>
+        <p>Roast something over the fire. Watch the deer wander the backyard from the deck. This is the part you'll remember.</p>
+      </div>
+    </div>
+
+    <div class="rooms-grid reveal" style="margin-top:100px">
+      <figure>
+        <img src="images/7ffe23eb-c263-4ae9-ba4b-6e03f0b2d3ab.jpg" alt="The light-filled primary suite" loading="lazy">
+        <figcaption><b>The primary suite</b><span>Light-flooded and peaceful, with a porthole window and a desk for remote work</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/image-18.jpg" alt="Queen guest bedroom" loading="lazy">
+        <figcaption><b>Queen bedrooms</b><span>Three queens with quality linens across the four bedrooms</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/image-19.jpg" alt="Twin bedroom" loading="lazy">
+        <figcaption><b>The twin room</b><span>Two twins — perfect for kids, or friends who drew the short straw together</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/image-13.jpg" alt="Modern black and white bathroom with glass shower" loading="lazy">
+        <figcaption><b>Two modern baths</b><span>Black-and-white tile, glass walk-in showers, updated fixtures</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <span class="kicker reveal">Photos</span>
+    <h2 class="reveal">Have a <em>look around</em></h2>
+    <div class="g-grid reveal">
+      <a class="g-wide g-tall" href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener"><img src="images/image-12.jpg" alt="Black Bear Cottage exterior" loading="lazy"></a>
+      <a href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener"><img src="images/image-15.jpg" alt="Dining room with seating for eight" loading="lazy"></a>
+      <a href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener"><img src="images/image-16.jpg" alt="Living room with wood-burning stove" loading="lazy"></a>
+      <a href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener"><img src="images/image-20.jpg" alt="Cozy modern living room" loading="lazy"></a>
+      <a href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener"><img src="images/img-3971.jpg" alt="Cooking with friends at the cottage" loading="lazy"></a>
+      <a href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener"><img src="images/image-22.jpg" alt="Guest bedroom" loading="lazy"></a>
+      <a href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener"><img src="images/img-4013.jpg" alt="Quiet mornings at the cottage" loading="lazy"></a>
+      <a href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener"><img src="images/image-14.jpg" alt="Bright dining area" loading="lazy"></a>
+      <a href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener"><img src="images/dsc-7047.jpg" alt="Inside the cottage" loading="lazy"></a>
+      <a href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener"><img src="images/dsc-6983.jpg" alt="Cottage details" loading="lazy"></a>
+      <a href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener"><img src="images/img-4087.jpg" alt="The outdoors at Black Bear Cottage" loading="lazy"></a>
+      <a class="g-wide" href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener"><img src="images/dsc-6904.jpg" alt="The tiny house" loading="lazy"></a>
+    </div>
+    <p class="amen-more reveal">See all photos on the <a href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener" style="color:var(--amber-soft)">Airbnb listing →</a></p>
+  </div>
+</section>
+
+<section id="amenities">
+  <div class="wrap">
+    <span class="kicker reveal">Amenities</span>
+    <h2 class="reveal">Everything's <em>already here</em></h2>
+    <div class="amen-grid reveal">
+      <div class="amen"><span class="ico"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14c2-1.8 4 1.8 6 0s4 1.8 6 0 3-1.4 4-.5"/><path d="M4 18.5c2-1.8 4 1.8 6 0s4 1.8 6 0 3-1.4 4-.5"/><path d="M7.5 9.5c-.8-1.5.8-2 0-3.5M12 9.5c-.8-1.5.8-2 0-3.5M16.5 9.5c-.8-1.5.8-2 0-3.5"/></svg></span><b>Hot tub</b><span>Under the stars, at the edge of the deck</span></div>
+      <div class="amen"><span class="ico"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c3.9 0 6.5-2.6 6.5-6.2 0-2.5-1.5-4.4-2.8-6C14.4 7.2 13.4 5.6 13 3.5c-2.6 1.6-3.4 3.7-3.2 5.9.1 1.1-.7 1.3-1.3.6-.5-.6-.8-1.4-.9-2.3-1.5 1.6-2.1 3.6-2.1 5.4C5.5 18.4 8.1 21 12 21z"/></svg></span><b>Fire pit &amp; wood stove</b><span>Custom mosaic hearth inside, fire pit by the trees</span></div>
+      <div class="amen"><span class="ico"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="12" r="6.5"/><path d="M16.5 12h4.5"/><circle cx="10" cy="12" r="2.2"/></svg></span><b>Chef's kitchen</b><span>Stainless appliances, eat-in breakfast bar</span></div>
+      <div class="amen"><span class="ico"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 7 10h2.5L5.5 16H9v0h6v0h3.5L14.5 10H17L12 3z"/><path d="M12 16v5"/></svg></span><b>Three private acres</b><span>Meadow and forest, bordered by the Rail Trail</span></div>
+      <div class="amen"><span class="ico"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5C8.5 5.4 15.5 5.4 20 9.5"/><path d="M7 13c3-2.6 7-2.6 10 0"/><circle cx="12" cy="17" r="1.3" fill="currentColor" stroke="none"/></svg></span><b>Fast Wi-Fi + workspace</b><span>High-speed Spectrum internet, dedicated desk</span></div>
+      <div class="amen"><span class="ico"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M5 6.5l14 11M19 6.5l-14 11M12 6.5 9.5 4.5M12 6.5l2.5-2M12 17.5l-2.5 2M12 17.5l2.5 2"/></svg></span><b>Central air &amp; heat</b><span>Comfortable in every season</span></div>
+      <div class="amen"><span class="ico"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8.5" r="1.6"/><circle cx="16" cy="8.5" r="1.6"/><circle cx="4.8" cy="13" r="1.5"/><circle cx="19.2" cy="13" r="1.5"/><path d="M12 12.5c-2.6 0-4.5 2-4.5 4 0 1.6 1.2 2.5 2.5 2.2 1-.2 1.4-.6 2-.6s1 .4 2 .6c1.3.3 2.5-.6 2.5-2.2 0-2-1.9-4-4.5-4z"/></svg></span><b>Pet friendly</b><span>Bring the dog — there's room to roam</span></div>
+      <div class="amen"><span class="ico"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="12" r="4"/><path d="M12 12h8M17 12v3M20 12v2.2"/></svg></span><b>Self check-in</b><span>Lockbox entry, check-in after 3 PM</span></div>
+      <div class="amen"><span class="ico"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4z"/><path d="M5 16.5A2.5 2.5 0 0 1 7.5 14H19"/><path d="M9 4v10"/></svg></span><b>Library nook</b><span>Books, games, guitar, and Smart TV with Netflix</span></div>
+    </div>
+    <p class="amen-more reveal">Also: wraparound deck · grill · washer &amp; dryer · dishwasher · free parking · tiny house (in season)</p>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rev-head reveal">
+      <span class="kicker">Guest Reviews</span>
+      <div class="big-rating">5.0</div>
+      <div class="stars">★★★★★</div>
+      <div class="rev-sub">14 five-star reviews · Guest Favorite on Airbnb</div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card reveal">
+        <q>We spent a weekend at Black Bear Cottage for our anniversary and loved it. So much personality — the black exterior is striking, and inside it's stylish but still super cozy. We loved the fireplace at night and the hot tub while watching the snow melt outside. Would definitely come back.</q>
+        <footer><b>Alex</b> · Airbnb Guest · April 2026</footer>
+      </div>
+      <div class="rev-card reveal">
+        <q>Nelson was an amazing host — responsive and a great communicator. The place is exquisite, furnished with taste and nothing superfluous. We cooked together, played games, did morning yoga in the tiny house, and explored the breweries in Livingston Manor and Roscoe. We'll be back!</q>
+        <footer><b>Carolyn</b> · Airbnb Guest · April 2026</footer>
+      </div>
+      <div class="rev-card reveal">
+        <q>Nelson was very friendly, proactive and checked in on us throughout our stay. He gave great local recommendations! The house is clean, cozy and looked just like the photos. The house is in great proximity to the town near great restaurants and breweries!</q>
+        <footer><b>Nick</b> · Airbnb Guest · March 2026</footer>
+      </div>
+      <div class="rev-card reveal">
+        <q>A cozy cabin in a great area of the Catskill Mountains, with ski chalets and hiking trails nearby. The hosts provided complimentary champagne and a well-stocked kitchen. Nelson was a super helpful host. A great stay for a group cabin retreat.</q>
+        <footer><b>Kiara</b> · Airbnb Guest · February 2026</footer>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <span class="kicker reveal">The Area</span>
+    <h2 class="reveal">Two miles from Livingston Manor. <em>A world away from everything else.</em></h2>
+    <p class="lede reveal">Livingston Manor has quietly become one of the most talked-about small towns in the Catskills — and Black Bear Cottage is five minutes from all of it.</p>
+    <div class="area-grid">
+      <div class="area-card reveal">
+        <img src="images/img-3961.jpg" alt="Livingston Manor village" loading="lazy">
+        <div class="area-body">
+          <span class="tag">Eat &amp; Drink</span>
+          <b>Main Street, five minutes away</b>
+          <p>Wood-fired pizza at The Kaatskeller, groceries and sandwiches at Main Street Farm, natural wine at Upstream — plus Catskill Brewery and Upward Brewing minutes from the door.</p>
+        </div>
+      </div>
+      <div class="area-card reveal">
+        <img src="images/image-10.jpg" alt="Fly fishing on the Willowemoc" loading="lazy">
+        <div class="area-body">
+          <span class="tag">On the Water</span>
+          <b>The birthplace of American fly-fishing</b>
+          <p>The Willowemoc runs just outside the village, and the Beaverkill is across the Manor. Some of the country's most storied trout water is at your fingertips.</p>
+        </div>
+      </div>
+      <div class="area-card reveal">
+        <img src="images/img-4081.jpg" alt="The Rail Trail" loading="lazy">
+        <div class="area-body">
+          <span class="tag">On the Trail</span>
+          <b>Hike from the back door</b>
+          <p>The Rail Trail starts behind the property. Beyond it: miles of state forest, golf at Sullivan County Country Club, horseback riding at Bridle Hill Farm, and alpacas at Buck Brook Farm.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div style="text-align:center">
+      <span class="kicker reveal">Good to Know</span>
+      <h2 class="reveal" style="margin:0 auto">Questions, <em>answered</em></h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <details>
+        <summary>When are check-in and checkout?</summary>
+        <p>Check-in is anytime after 3:00 PM with easy self check-in via lockbox. Checkout is by 11:00 AM. Need flexibility? Just ask — Nelson responds fast.</p>
+      </details>
+      <details>
+        <summary>How many people can stay?</summary>
+        <p>The main house sleeps 8 across four bedrooms and a bonus room (3 queens + 2 twins), with 2 full bathrooms. In season, the tiny house sleeps 2 more in a cozy loft.</p>
+      </details>
+      <details>
+        <summary>Is the tiny house available year-round?</summary>
+        <p>The tiny house is seasonal — it runs on space heaters in colder months and isn't plumbed, so tiny house guests use the main house facilities. It's a favorite for morning yoga and kids who want their own cabin.</p>
+      </details>
+      <details>
+        <summary>Can I bring my dog?</summary>
+        <p>Yes — Black Bear Cottage is pet friendly, and with three fenced-by-forest acres and the Rail Trail out back, dogs tend to have as good a weekend as their humans.</p>
+      </details>
+      <details>
+        <summary>How do I get there from NYC?</summary>
+        <p>It's about two hours from the George Washington Bridge — an easy straight shot up Route 17 to Livingston Manor, then two miles to the cottage on a quiet dead-end road.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <span class="kicker reveal">Book Your Stay</span>
+  <h2 class="reveal">The quiet is waiting. <em>The hot tub's already warm.</em></h2>
+  <p class="lede reveal">From $470 a night · Sleeps 8 · Pet friendly</p>
+  <div class="reveal">
+    <a class="btn" href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener">Check Availability on Airbnb</a>
+    <p class="fine">Booked securely through Airbnb — 5.0 rating, Guest Favorite, Superhost.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap foot-inner">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 64 64" aria-hidden="true" style="width:22px;height:22px;fill:var(--amber)"><path d="M18 22a7 7 0 1 1 6-10 18 18 0 0 1 16 0 7 7 0 1 1 6 10 18 18 0 0 1 4 11c0 12-10 19-18 19S14 45 14 33a18 18 0 0 1 4-11zm14 12a4 4 0 0 0-4 4c0 3 2 6 4 6s4-3 4-6a4 4 0 0 0-4-4z"/></svg>
+      Black Bear Cottage
+    </a>
+    <ul class="foot-links">
+      <li><a href="#cottage">The Cottage</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#area">The Area</a></li>
+      <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener">Book on Airbnb</a></li>
+    </ul>
+    <p class="foot-note">Black Bear Cottage · Livingston Manor, New York · A renovated 1902 cottage on three wooded acres at the edge of Catskill Park.</p>
+  </div>
+</footer>
+
+<script>
+  // Sticky nav
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
