@@ -1,0 +1,35 @@
+name: Fetch site images
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - images/urls.txt
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download images
+        run: |
+          cd images
+          while read -r name url; do
+            [ -z "$name" ] && continue
+            if [ ! -f "$name" ]; then
+              echo "Downloading $name"
+              curl -fsSL "$url" -o "$name"
+            fi
+          done < urls.txt
+
+      - name: Commit images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add images
+          git diff --cached --quiet || git commit -m "Add downloaded site images"
+          git push
