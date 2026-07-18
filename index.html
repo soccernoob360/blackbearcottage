@@ -359,6 +359,7 @@
     <li class="hide-m"><a href="#amenities">Amenities</a></li>
     <li class="hide-m"><a href="#reviews">Reviews</a></li>
     <li class="hide-m"><a href="#area">The Area</a></li>
+    <li class="hide-m"><a href="/things-to-do-livingston-manor/">Local Guide</a></li>
     <li class="hide-m"><a href="#availability">Availability</a></li>
     <li class="hide-m"><a href="#faq">FAQs</a></li>
     <li><a class="btn" href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener">Book on Airbnb</a></li>
@@ -533,7 +534,7 @@
   <div class="wrap">
     <span class="kicker reveal">The Area</span>
     <h2 class="reveal">Two miles from Livingston Manor. <em>A world away from everything else.</em></h2>
-    <p class="lede reveal">Livingston Manor has quietly become one of the most talked-about small towns in the Catskills — and Black Bear Cottage is five minutes from all of it.</p>
+    <p class="lede reveal">Livingston Manor has quietly become one of the most talked-about small towns in the Catskills — and Black Bear Cottage is five minutes from all of it. Want the full rundown? Read our <a href="/things-to-do-livingston-manor/" style="color:var(--amber-soft)">local guide to Livingston Manor</a>.</p>
     <div class="area-grid">
       <div class="area-card reveal">
         <img src="images/img-3961.jpg" alt="Livingston Manor village" loading="lazy">
@@ -631,6 +632,7 @@
       <li><a href="#cottage">The Cottage</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#area">The Area</a></li>
+      <li><a href="/things-to-do-livingston-manor/">Local Guide</a></li>
       <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener">Book on Airbnb</a></li>
     </ul>
@@ -651,7 +653,7 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Availability calendar — renders from availability.json (built by GitHub Action from the Airbnb iCal feed)
+  // Availability calendar — renders from availability.json (built by GitHub Action from the booking calendar iCal feed)
   (async () => {
     const cal = document.getElementById('cal');
     if (!cal) return;
