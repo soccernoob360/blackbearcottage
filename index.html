@@ -276,6 +276,35 @@
   .area-body .tag { font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--amber); display: block; margin-bottom: 10px; }
   @media (max-width: 860px) { .area-grid { grid-template-columns: 1fr; } }
 
+  /* ---------- Availability ---------- */
+  .cal-grid { margin-top: 54px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .cal-month {
+    border: 1px solid var(--line); border-radius: 3px; padding: 24px 20px;
+    background: var(--ink-2);
+  }
+  .cal-month h4 {
+    font-family: var(--serif); font-weight: 400; font-size: 1.1rem;
+    text-align: center; margin-bottom: 16px; letter-spacing: .04em;
+  }
+  .cal-dow, .cal-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+  .cal-dow span {
+    font-size: .62rem; letter-spacing: .1em; text-transform: uppercase;
+    color: rgba(207,199,184,.5); text-align: center; padding-bottom: 6px;
+  }
+  .cal-days span {
+    aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+    font-size: .8rem; border-radius: 2px;
+  }
+  .cal-days .open { background: rgba(217,164,91,.16); color: var(--paper); }
+  .cal-days .busy { color: rgba(207,199,184,.32); text-decoration: line-through; }
+  .cal-days .past { color: rgba(207,199,184,.18); }
+  .cal-legend { margin-top: 22px; font-size: .82rem; color: var(--paper-dim); display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .cal-legend .dot { width: 12px; height: 12px; border-radius: 2px; display: inline-block; margin-right: 7px; vertical-align: -1px; }
+  .cal-legend .dot.open { background: rgba(217,164,91,.5); }
+  .cal-legend .dot.busy { background: rgba(207,199,184,.25); }
+  .cal-note { font-size: .8rem; color: rgba(207,199,184,.55); }
+  @media (max-width: 860px) { .cal-grid { grid-template-columns: 1fr; } }
+
   details {
     border-bottom: 1px solid var(--line); padding: 22px 4px;
   }
@@ -330,6 +359,7 @@
     <li class="hide-m"><a href="#amenities">Amenities</a></li>
     <li class="hide-m"><a href="#reviews">Reviews</a></li>
     <li class="hide-m"><a href="#area">The Area</a></li>
+    <li class="hide-m"><a href="#availability">Availability</a></li>
     <li class="hide-m"><a href="#faq">FAQs</a></li>
     <li><a class="btn" href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener">Book on Airbnb</a></li>
   </ul>
@@ -533,6 +563,23 @@
   </div>
 </section>
 
+<section id="availability">
+  <div class="wrap">
+    <span class="kicker reveal">Availability</span>
+    <h2 class="reveal">Find your <em>open weekend</em></h2>
+    <p class="lede reveal">Synced from our booking calendar throughout the day. See a stretch you like? Lock it in on Airbnb before someone else does.</p>
+    <div id="cal" class="cal-grid reveal"></div>
+    <div class="cal-legend reveal">
+      <span><span class="dot open"></span>Available</span>
+      <span><span class="dot busy"></span>Booked</span>
+      <span class="cal-note" id="cal-updated"></span>
+    </div>
+    <div class="reveal" style="margin-top:30px">
+      <a class="btn" href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener">Book Your Dates on Airbnb</a>
+    </div>
+  </div>
+</section>
+
 <section id="faq">
   <div class="wrap">
     <div style="text-align:center">
@@ -603,6 +650,46 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Availability calendar — renders from availability.json (built by GitHub Action from the Airbnb iCal feed)
+  (async () => {
+    const cal = document.getElementById('cal');
+    if (!cal) return;
+    const fallback = () => {
+      cal.innerHTML = '<p style="grid-column:1/-1;color:var(--paper-dim)">Live availability is on our Airbnb listing — tap the button below to see open dates.</p>';
+      document.querySelector('.cal-legend').style.display = 'none';
+    };
+    let data;
+    try {
+      const res = await fetch('availability.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error();
+      data = await res.json();
+      if (!Array.isArray(data.busy)) throw new Error();
+    } catch (e) { fallback(); return; }
+
+    const busy = data.busy.map(([s, e]) => [new Date(s + 'T00:00:00'), new Date(e + 'T00:00:00')]);
+    const isBusy = (d) => busy.some(([s, e]) => d >= s && d < e);
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const dows = ['S','M','T','W','T','F','S'];
+    let html = '';
+    for (let m = 0; m < 3; m++) {
+      const first = new Date(today.getFullYear(), today.getMonth() + m, 1);
+      const nDays = new Date(first.getFullYear(), first.getMonth() + 1, 0).getDate();
+      let days = '';
+      for (let i = 0; i < first.getDay(); i++) days += '<span></span>';
+      for (let d = 1; d <= nDays; d++) {
+        const date = new Date(first.getFullYear(), first.getMonth(), d);
+        const cls = date < today ? 'past' : (isBusy(date) ? 'busy' : 'open');
+        days += `<span class="${cls}">${d}</span>`;
+      }
+      html += `<div class="cal-month"><h4>${months[first.getMonth()]} ${first.getFullYear()}</h4>` +
+              `<div class="cal-dow">${dows.map(x => `<span>${x}</span>`).join('')}</div>` +
+              `<div class="cal-days">${days}</div></div>`;
+    }
+    cal.innerHTML = html;
+    if (data.updated) document.getElementById('cal-updated').textContent = 'Calendar updated ' + data.updated.slice(0, 10) + ' — confirm exact dates on Airbnb';
+  })();
 </script>
 </body>
 </html>
