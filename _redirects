@@ -1,6 +1,6 @@
-/about-catskills-cabin-rental    /#cottage    301
-/amenities                       /#amenities  301
-/faqs                            /#faq        301
-/blog                            /            301
-/blog/*                          /            301
-/cart                            /            301
+/about-catskills-cabin-rental    /#cottage                          301
+/amenities                       /#amenities                        301
+/faqs                            /#faq                              301
+/blog                            /things-to-do-livingston-manor/    301
+/blog/*                          /things-to-do-livingston-manor/    301
+/cart                            /                                  301
