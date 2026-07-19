@@ -7,7 +7,10 @@
 <meta name="description" content="A renovated 1902 cottage on three wooded acres in Livingston Manor, NY. Hot tub under the stars, chef's kitchen, fire pit, and a tiny house out back. Sleeps 8. Two hours from NYC.">
 <meta property="og:title" content="Black Bear Cottage — Catskills Cabin with Hot Tub">
 <meta property="og:description" content="Three wooded acres. A hot tub under the stars. A renovated 1902 cottage two hours from New York City.">
-<meta property="og:image" content="images/image-12.jpg">
+<meta property="og:image" content="https://www.blackbearcottage.net/images/image-12.jpg">
+<meta property="og:url" content="https://www.blackbearcottage.net/">
+<link rel="canonical" href="https://www.blackbearcottage.net/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -67,6 +70,7 @@
   a { color: inherit; }
   .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
+  /* ---------- Nav ---------- */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
@@ -108,6 +112,7 @@
   .btn.ghost:hover { border-color: var(--paper); background: rgba(244,239,230,.06); }
   @media (max-width: 860px) { .nav-links li.hide-m { display: none; } }
 
+  /* ---------- Hero ---------- */
   header.hero {
     position: relative; min-height: 100svh;
     display: flex; align-items: flex-end;
@@ -139,6 +144,7 @@
   }
   .hero-ctas { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
 
+  /* ---------- Facts strip ---------- */
   .facts { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--ink-2); }
   .facts-inner {
     display: flex; flex-wrap: wrap; justify-content: space-between;
@@ -153,6 +159,20 @@
     font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
     color: var(--paper-dim);
   }
+
+  /* ---------- Sections ---------- */
+  .wknd-chips { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+  .wknd-label { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--paper-dim); margin-right: 4px; }
+  .wknd-chip {
+    display: inline-block; text-decoration: none;
+    border: 1px solid rgba(217,164,91,.5); color: var(--amber-soft);
+    padding: 10px 20px; border-radius: 100px; font-size: .88rem; letter-spacing: .04em;
+    transition: background .25s, color .25s;
+  }
+  .wknd-chip:hover { background: var(--amber); color: var(--ink); }
+  .hero-wknd { margin-top: 20px; font-size: .86rem; color: var(--paper-dim); letter-spacing: .02em; }
+  .hero-wknd a { color: var(--amber-soft); text-decoration: none; }
+  .hero-wknd a:hover { text-decoration: underline; }
 
   .quote-strip { padding: 64px 24px; text-align: center; }
   .quote-strip q {
@@ -199,6 +219,7 @@
     section { padding: 72px 0; }
   }
 
+  /* ---------- Rooms ---------- */
   .rooms-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
   .rooms-grid figure { margin: 0; }
   .rooms-grid img {
@@ -213,6 +234,7 @@
   .rooms-grid figcaption span { font-size: .84rem; color: var(--paper-dim); line-height: 1.5; display: block; }
   @media (max-width: 860px) { .rooms-grid { grid-template-columns: repeat(2, 1fr); } }
 
+  /* ---------- Gallery ---------- */
   .gallery { background: var(--ink-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .g-grid {
     margin-top: 48px; display: grid; gap: 14px;
@@ -231,6 +253,7 @@
     .g-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
   }
 
+  /* ---------- Amenities ---------- */
   .amen-grid {
     margin-top: 54px; display: grid;
     grid-template-columns: repeat(3, 1fr); gap: 1px;
@@ -250,6 +273,7 @@
   }
   @media (max-width: 860px) { .amen-grid { grid-template-columns: 1fr; } }
 
+  /* ---------- Reviews ---------- */
   .reviews { background: var(--ink-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .rev-head { text-align: center; }
   .rev-head h2 { margin: 0 auto; }
@@ -273,6 +297,7 @@
   .rev-card footer b { color: var(--amber-soft); font-weight: 500; }
   @media (max-width: 860px) { .rev-grid { grid-template-columns: 1fr; } }
 
+  /* ---------- Area ---------- */
   .area-grid { margin-top: 54px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
   .area-card {
     border-radius: 3px; overflow: hidden; border: 1px solid var(--line);
@@ -285,6 +310,7 @@
   .area-body .tag { font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--amber); display: block; margin-bottom: 10px; }
   @media (max-width: 860px) { .area-grid { grid-template-columns: 1fr; } }
 
+  /* ---------- FAQ ---------- */
   /* ---------- Availability ---------- */
   .cal-grid { margin-top: 54px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
   .cal-month {
@@ -327,6 +353,7 @@
   details p { margin-top: 14px; color: var(--paper-dim); max-width: 700px; }
   .faq-wrap { max-width: 820px; margin: 48px auto 0; }
 
+  /* ---------- Book CTA ---------- */
   .book {
     position: relative; text-align: center; padding: 150px 24px;
     background-image:
@@ -339,6 +366,7 @@
   .book .btn { margin-top: 36px; font-size: .88rem; padding: 17px 42px; }
   .book .fine { margin-top: 20px; font-size: .8rem; color: rgba(207,199,184,.7); }
 
+  /* ---------- Footer ---------- */
   .site-footer {
     border-top: 1px solid var(--line); padding: 54px 0; background: var(--ink);
   }
@@ -351,6 +379,7 @@
   .foot-links a:hover { color: var(--paper); }
   .foot-note { width: 100%; margin-top: 28px; font-size: .75rem; color: rgba(207,199,184,.5); }
 
+  /* ---------- Reveal on scroll ---------- */
   .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s ease, transform .9s ease; }
   .reveal.in { opacity: 1; transform: none; }
 </style>
@@ -385,6 +414,7 @@
       <a class="btn" href="https://airbnb.com/h/theblackbearcottage" target="_blank" rel="noopener">Check Availability</a>
       <a class="btn ghost" href="#cottage">Explore the Cottage</a>
     </div>
+    <p class="hero-wknd" id="hero-wknd" hidden></p>
   </div>
 </header>
 
@@ -591,6 +621,7 @@
     <span class="kicker reveal">Availability</span>
     <h2 class="reveal">Find your <em>open weekend</em></h2>
     <p class="lede reveal">Synced from our booking calendar throughout the day. See a stretch you like? Lock it in on Airbnb before someone else does.</p>
+    <div id="wknd" class="wknd-chips reveal" hidden></div>
     <div id="cal" class="cal-grid reveal"></div>
     <div class="cal-legend reveal">
       <span><span class="dot open"></span>Available</span>
@@ -675,7 +706,7 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Availability calendar — renders from availability.json (built by GitHub Action from the booking calendar iCal feed)
+  // Availability calendar — renders from availability.json (built by GitHub Action from the Airbnb iCal feed)
   (async () => {
     const cal = document.getElementById('cal');
     if (!cal) return;
@@ -713,6 +744,29 @@
     }
     cal.innerHTML = html;
     if (data.updated) document.getElementById('cal-updated').textContent = 'Calendar updated ' + data.updated.slice(0, 10) + ' — confirm exact dates on Airbnb';
+
+    // Next open weekends (Fri + Sat nights both free), deep-linked to Airbnb with dates prefilled
+    const iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    const short = (d) => months[d.getMonth()].slice(0, 3) + ' ' + d.getDate();
+    const firstFri = new Date(today); firstFri.setDate(firstFri.getDate() + ((5 - firstFri.getDay() + 7) % 7));
+    const weekends = [];
+    for (let w = 0; w < 24 && weekends.length < 4; w++) {
+      const fri = new Date(firstFri); fri.setDate(fri.getDate() + w * 7);
+      const sat = new Date(fri); sat.setDate(sat.getDate() + 1);
+      const sun = new Date(fri); sun.setDate(sun.getDate() + 2);
+      if (!isBusy(fri) && !isBusy(sat)) weekends.push([fri, sun]);
+    }
+    if (weekends.length) {
+      const link = ([a, b]) => `https://www.airbnb.com/rooms/1318201189062353342?check_in=${iso(a)}&check_out=${iso(b)}&adults=2`;
+      const label = ([a, b]) => a.getMonth() === b.getMonth() ? `${short(a)}–${b.getDate()}` : `${short(a)} – ${short(b)}`;
+      const wknd = document.getElementById('wknd');
+      wknd.innerHTML = '<span class="wknd-label">Next open weekends</span>' +
+        weekends.map(x => `<a class="wknd-chip" href="${link(x)}" target="_blank" rel="noopener">${label(x)}</a>`).join('');
+      wknd.hidden = false;
+      const hero = document.getElementById('hero-wknd');
+      hero.innerHTML = 'Next open weekends: ' + weekends.slice(0, 3).map(x => `<a href="${link(x)}" target="_blank" rel="noopener">${label(x)}</a>`).join(' · ');
+      hero.hidden = false;
+    }
   })();
 </script>
 </body>
