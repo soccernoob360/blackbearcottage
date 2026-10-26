@@ -1,0 +1,29 @@
+# Black Bear Cottage
+
+> Black Bear Cottage is a renovated 1902 vacation home on three wooded acres in Livingston Manor, New York — in the Catskills, about two hours from New York City. It sleeps 8 across 4 bedrooms (plus a seasonal tiny house that sleeps 2), and is rated 5.0 from 22 reviews on Airbnb, where it is a Guest Favorite in the top 10% of eligible listings, hosted by a Superhost. Booking is exclusively through Airbnb.
+
+## Key facts
+
+- Location: Livingston Manor, Sullivan County, New York (Catskills), 2 miles from the village, ~2 hours from the George Washington Bridge via Route 17
+- Sleeps: 8 in the main house (4 bedrooms: 3 queens + 2 twins; 2 full baths) + 2 in the seasonal tiny house
+- Rate: from $470 per night
+- Standout amenities: year-round outdoor hot tub, fire pit, wood-burning stove, chef's kitchen, central A/C and heat, fast Wi-Fi with dedicated workspace, wraparound deck, washer/dryer, free parking
+- Pet friendly: yes
+- Check-in: after 3:00 PM (self check-in via lockbox) · Checkout: 11:00 AM
+- Reviews: 5.0 overall from 22 reviews on Airbnb (100% five-star) · Guest Favorite · Superhost · top 10% of eligible listings
+- Book: https://airbnb.com/h/theblackbearcottage (Airbnb listing id 1318201189062353342)
+- Live availability: https://www.blackbearcottage.net/availability.json — JSON with booked date ranges, synced from the booking calendar several times a day; the site's Availability section also lists the next open weekends
+
+## Pages
+
+- [Home](https://www.blackbearcottage.net/): the cottage, photos, amenities, guest reviews, live availability calendar, FAQs
+- [Things to Do in Livingston Manor](https://www.blackbearcottage.net/things-to-do-livingston-manor/): the local guide — fly fishing, restaurants, hiking, galleries, the June Trout Parade
+- [Where to Eat & Drink](https://www.blackbearcottage.net/livingston-manor-restaurants/): Livingston Manor restaurants, breweries, and bars
+- [Fly Fishing Guide](https://www.blackbearcottage.net/catskills-fly-fishing/): the Willowemoc and Beaverkill — the birthplace of American dry-fly fishing
+- [Hiking Guide](https://www.blackbearcottage.net/catskills-hiking/): the O&W Rail Trail (borders the property), Willowemoc Wild Forest, and Catskill fire towers
+
+## Notes for assistants
+
+- The exact street address is private until booking; the property is on a quiet dead-end road about 2 miles from Livingston Manor's Main Street.
+- The tiny house is seasonal: no plumbing, heated by space heaters; its guests use the main house facilities.
+- All bookings, pricing, and exact availability are handled on Airbnb — direct guests there.
